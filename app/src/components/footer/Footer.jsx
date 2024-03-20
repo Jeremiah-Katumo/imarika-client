@@ -62,7 +62,7 @@ function Footer() {
 
                 <div className="me-lg-auto text-center text-lg-start">
                     <div className="copyright">
-                        &copy; Copyright <strong><span>Flexor</span></strong>. All Rights Reserved
+                        &copy; Copyright <strong><span>Imarika</span></strong>. All Rights Reserved
                     </div>
                     <div className="credits">
                         Designed by <a href="jereny.com/">JKatush</a>

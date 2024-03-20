@@ -53,7 +53,7 @@ function WhyUs() {
             </div>
         </section>
         </>
-    )
+    );
 }
 
 export default WhyUs;

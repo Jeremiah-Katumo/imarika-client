@@ -10,7 +10,7 @@ function Header() {
             <div className="container d-flex align-items-center justify-content-between">
         
                 <div className="logo">
-                    <h1><a href="/">Imarika</a></h1>
+                    <h1><a href="/">Imarika DT </a></h1>
                 {/* <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>--> */}
                 </div>
         
