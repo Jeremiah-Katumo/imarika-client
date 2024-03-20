@@ -10,6 +10,9 @@ import Values from '../body/Values';
 import Services from '../body/Services';
 import Testimonials from '../body/Testimonials';
 import ContactUs from '../body/ContactUs';
+import Gallery from '../body/Gallery';
+import Team from '../body/Team';
+import FAQ from '../body/Faqs';
 
 function Main() {
     return (
@@ -23,6 +26,9 @@ function Main() {
             <Services />
             <Values />
             <Testimonials />
+            <Gallery />
+            <Team />
+            <FAQ />
             <ContactUs />
         </main>
         <Footer />
