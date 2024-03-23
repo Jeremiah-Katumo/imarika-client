@@ -1,94 +1,66 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import '../../assets/css/main.css';
-import TestimonialOne from '../../assets/img/testimonials/testimonials-1.png';
-import TestimonialTwo from '../../assets/img/testimonials/testimonials-2.png';
-import TestimonialThree from '../../assets/img/testimonials/testimonials-3.png';
-import TestimonialFour from '../../assets/img/testimonials/testimonials-4.png';
-import TestimonialFive from '../../assets/img/testimonials/testimonials-5.png';
+import testimonialOne from '../../assets/img/testimonials/testimonials-1.png';
+import testimonialTwo from '../../assets/img/testimonials/testimonials-2.png';
+import testimonialThree from '../../assets/img/testimonials/testimonials-3.png';
+import testimonialFour from '../../assets/img/testimonials/testimonials-4.png';
+import testimonialFive from '../../assets/img/testimonials/testimonials-3.png';
 
-function Testimonials() {
+// Import testimonial images dynamically
+// function importAll(r) {
+//     let images = {};
+//     r.keys().map((item, index) => ( images[index] = r(item) ));
+//     return images;
+// }
+// const testimonialImages = importAll(require.context('../../assets/img/testimonials', false, /\.(png|jpe?g|svg)$/));
+
+const Testimonials = () => {
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            const nextIndex = (currentIndex + 1) % testimonials.length;
+            setCurrentIndex(nextIndex);
+        }, 3000);
+
+        return () => clearInterval(timer);
+    }, [currentIndex]);
+
+    const handleNext = () => {
+        const nextIndex = (currentIndex + 1) % testimonials.length;
+        setCurrentIndex(nextIndex);
+    };
 
     return (
-        <>
-        <section id="testimonials" class="testimonials">
-            <div class="container position-relative" data-aos="fade-up">
-
-                <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-                    <div class="swiper-wrapper">
-
-                        <div class="swiper-slide">
-                        <div class="testimonial-item">
-                            <img src={TestimonialOne} class="testimonial-img" alt="" />
-                            <h3>Saul Goodman</h3>
-                            <h4>Ceo &amp; Founder</h4>
-                            <p>
-                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                            Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                            </p>
-                        </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                        <div class="testimonial-item">
-                            <img src={TestimonialTwo} class="testimonial-img" alt="" />
-                            <h3>Sara Wilsson</h3>
-                            <h4>Designer</h4>
-                            <p>
-                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                            Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                            </p>
-                        </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                        <div class="testimonial-item">
-                            <img src={TestimonialThree} class="testimonial-img" alt="" />
-                            <h3>Jena Karlis</h3>
-                            <h4>Store Owner</h4>
-                            <p>
-                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                            Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                            </p>
-                        </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                        <div class="testimonial-item">
-                            <img src={TestimonialFour} class="testimonial-img" alt="" />
-                            <h3>Matt Brandon</h3>
-                            <h4>Freelancer</h4>
-                            <p>
-                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                            Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                            </p>
-                        </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                        <div class="testimonial-item">
-                            <img src={TestimonialFive} class="testimonial-img" alt="" />
-                            <h3>John Larson</h3>
-                            <h4>Entrepreneur</h4>
-                            <p>
-                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                            Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                            </p>
-                        </div>
-                        </div>
-
-                    </div>
-                    <div class="swiper-pagination"></div>
+        <section id="testimonials" className="testimonials">
+            <div className="container position-relative" data-aos="fade-up">
+                <div className="carousel-inner">
+                    {testimonials.map((testimonial, index) => (
+                        <span key={index} className={`carousel-item ${index === currentIndex ? "active" : ""}`}>
+                            <div onClick={handleNext}>
+                                <img src={testimonial.image} className="testimonial-img" alt="" />
+                                <h3>{testimonial.name}</h3>
+                                <h4>{testimonial.position}</h4>
+                                <p>
+                                    <i className="bx bxs-quote-alt-left quote-icon-left"></i>
+                                        {testimonial.quote}
+                                    <i className="bx bxs-quote-alt-right quote-icon-right"></i>
+                                </p>
+                            </div>
+                        </span>
+                    ))}
                 </div>
-
             </div>
         </section>
-        </>
-    )
-}
+    );
+};
+
+const testimonials = [
+    { image: testimonialOne, name: "Saul Goodman", position: "Ceo & Founder", quote: "Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper." },
+    { image: testimonialTwo, name: "Sara Wilsson", position: "Designer", quote: "Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa." },
+    { image: testimonialThree, name: "Jena Karlis", position: "Store Owner", quote: "Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim." },
+    { image: testimonialFour, name: "Matt Brandon", position: "Freelancer", quote: "Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam." },
+    { image: testimonialFive, name: "John Larson", position: "Entrepreneur", quote: "Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid." }
+];
 
 export default Testimonials;

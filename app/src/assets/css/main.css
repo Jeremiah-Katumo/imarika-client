@@ -105,6 +105,11 @@ body {
   #topbar .contact-info i a:hover {
     color: #ff5821;
   }
+
+  .cta {
+    display: flex;
+    gap: 2rem;
+  }
   
   #topbar .cta a {
     color: #fff;
