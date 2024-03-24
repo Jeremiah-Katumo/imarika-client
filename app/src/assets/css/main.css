@@ -989,10 +989,11 @@ body {
   .testimonials .testimonial-item {
     text-align: center;
     color: #fff;
+    /* width: 200px; */
   }
   
   .testimonials .testimonial-item .testimonial-img {
-    width: 100px;
+    width: auto;
     border-radius: 50%;
     border: 6px solid rgba(255, 255, 255, 0.15);
     margin: 0 auto;
@@ -1034,6 +1035,7 @@ body {
     font-style: italic;
     margin: 0 auto 15px auto;
     color: #eee;
+    width: auto;
   }
   
   .testimonials .swiper-pagination {

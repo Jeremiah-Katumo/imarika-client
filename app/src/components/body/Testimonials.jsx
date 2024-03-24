@@ -34,21 +34,23 @@ const Testimonials = () => {
     return (
         <section id="testimonials" className="testimonials">
             <div className="container position-relative" data-aos="fade-up">
-                <div className="carousel-inner">
-                    {testimonials.map((testimonial, index) => (
-                        <span key={index} className={`carousel-item ${index === currentIndex ? "active" : ""}`}>
-                            <div onClick={handleNext}>
-                                <img src={testimonial.image} className="testimonial-img" alt="" />
-                                <h3>{testimonial.name}</h3>
-                                <h4>{testimonial.position}</h4>
-                                <p>
-                                    <i className="bx bxs-quote-alt-left quote-icon-left"></i>
-                                        {testimonial.quote}
-                                    <i className="bx bxs-quote-alt-right quote-icon-right"></i>
-                                </p>
-                            </div>
-                        </span>
-                    ))}
+                <div className="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+                    <div className="carousel-inner">
+                        {testimonials.map((testimonial, index) => (
+                            <span key={index} className={`carousel-item swiper-slider ${index === currentIndex ? "active" : ""}`}>
+                                <div className="testimonial-item" onClick={handleNext}>
+                                    <img src={testimonial.image} className="testimonial-img" alt="" />
+                                    <h3>{testimonial.name}</h3>
+                                    <h4>{testimonial.position}</h4>
+                                    <p>
+                                        <i className="bx bxs-quote-alt-left quote-icon-left"></i>
+                                            {testimonial.quote}
+                                        <i className="bx bxs-quote-alt-right quote-icon-right"></i>
+                                    </p>
+                                </div>
+                            </span>
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>

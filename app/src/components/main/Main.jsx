@@ -14,6 +14,7 @@ import ContactUs from '../body/ContactUs';
 import Gallery from '../body/Gallery';
 import Team from '../body/Team';
 import FAQ from '../body/Faqs';
+import AOSInitializer from '../body/AOSInitialiser';
 
 function Main() {
     return (
@@ -34,6 +35,7 @@ function Main() {
         </main>
         <Footer />
         <BackToTop />
+        <AOSInitializer />
         </>
     )
 }
