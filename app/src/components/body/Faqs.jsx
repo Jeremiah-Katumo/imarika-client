@@ -62,7 +62,7 @@ function FAQ() {
                 onMouseEnter={() => handleMouseEnter(index)}
                 onMouseLeave={handleMouseLeave}
               >
-                <i className="bx bx-help-circle icon-help"></i> {item.question}
+                <i className="bx bi-help-circle icon-help"></i> {item.question}
                 <i className={`bx ${hoveredQuestion === index ? 'bx-chevron-up' : 'bx-chevron-down'} icon-toggle`}></i>
                 {hoveredQuestion === index && (
                   <div className="faq-answer">

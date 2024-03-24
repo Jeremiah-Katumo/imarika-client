@@ -16,9 +16,9 @@ function InfoBox({ icon, title, content, delay }) {
 
 function ContactUsInfo() {
     const infoItems = [
-        { icon: "bx bx-map", title: "Our Address", content: "Charo Wa Mae Street, Close to KCH", delay: 0 },
-        { icon: "bx bx-envelope", title: "Email Us", content: "imarika@info.com<br/>contact@imarika.com", delay: 100 },
-        { icon: "bx bx-phone-call", title: "Call Us", content: "+1 5589 55488 55<br/>+1 6678 254445 41", delay: 200 }
+        { icon: "bx bi-map", title: "Our Address", content: "Charo Wa Mae Street, Close to KCH", delay: 0 },
+        { icon: "bx bi-envelope", title: "Email Us", content: "imarika@info.com<br/>contact@imarika.com", delay: 100 },
+        { icon: "bx bi-phone", title: "Call Us", content: "+1 5589 55488 55<br/>+1 6678 254445 41", delay: 200 }
     ];
 
     return (                  

@@ -13,7 +13,7 @@ const Footer = () => {
 
   // Useful Links
   const usefulLinks = [
-    { text: 'Home', href: '/' },
+    { text: 'Home', href: '#hero' },
     { text: 'About us', href: '#about' },
     { text: 'Services', href: '#services' },
     { text: 'Terms of service', href: '#termsofservice' },
@@ -50,7 +50,7 @@ const Footer = () => {
                             <h4>{index === 0 ? 'Useful Links' : 'Our Services'}</h4>
                             <ul>
                                 {links.map((item, idx) => (
-                                <li key={idx}><i className="bx bx-chevron-right"></i> <a href={item.href}>{item.text}</a></li>
+                                    <li key={idx}><i className="bx bx-chevron-right"></i> <a href={item.href}>{item.text}</a></li>
                                 ))}
                             </ul>
                         </div>

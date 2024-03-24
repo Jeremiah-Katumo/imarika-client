@@ -1475,6 +1475,10 @@ body {
     right: 0;
     top: 0;
   }
+
+  .faq .faq-list .icon-help:hover {
+    color: #ff5821;
+  }
   
   .faq .faq-list p {
     margin-bottom: 0;
@@ -2146,7 +2150,7 @@ body {
   
   #footer .footer-top {
     padding: 60px 0 30px 0;
-    background: #fff9f7;
+    background: skyblue;
   }
   
   #footer .footer-top .footer-contact {
