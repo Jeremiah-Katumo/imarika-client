@@ -36,7 +36,7 @@ const Footer = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-lg-3 col-md-6 footer-contact">
-                        <h3>Imarika</h3>
+                        <h3><a href="#topbar">Imarika</a></h3>
                         <p>{contactInfo.address}<br />
                             {contactInfo.city}<br />
                             {contactInfo.country}<br />
