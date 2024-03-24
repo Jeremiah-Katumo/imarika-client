@@ -1,84 +1,93 @@
 import React from "react";
 import '../../assets/css/main.css';
 
-function Footer() {
+const Footer = () => {
+  // Contact Info
+  const contactInfo = {
+    address: "A108 Adam Street",
+    city: "New York, NY 535022",
+    country: "United States",
+    phone: "+1 5589 55488 55",
+    email: "info@example.com"
+  };
 
-    return (
-        <>
-        <footer id="footer">
+  // Useful Links
+  const usefulLinks = [
+    { text: 'Home', href: '/' },
+    { text: 'About us', href: '#about' },
+    { text: 'Services', href: '#services' },
+    { text: 'Terms of service', href: '#termsofservice' },
+    { text: 'Privacy policy', href: '#privacypolicy' }
+  ];
 
-            <div className="footer-top">
-                <div className="container">
-                    <div className="row">
+  // Our Services
+  const ourServices = [
+    { text: 'Web Design', href: '#web' },
+    { text: 'Web Development', href: '#web' },
+    { text: 'Product Management', href: '#product' },
+    { text: 'Marketing', href: '#marketing' },
+    { text: 'Graphic Design', href: '#graphic' }
+  ];
 
-                        <div className="col-lg-3 col-md-6 footer-contact">
-                            <h3>Imarika</h3>
-                            <p>
-                                A108 Adam Street <br/>
-                                New York, NY 535022<br/>
-                                United States <br/>
-                                <strong>Phone:</strong> +1 5589 55488 55<br/>
-                                <strong>Email:</strong> info@example.com<br/>
-                            </p>
-                        </div>
-                        
+  return (
+    <>
+    <footer id="footer">
+        <div className="footer-top">
+            <div className="container">
+                <div className="row">
+                    <div className="col-lg-3 col-md-6 footer-contact">
+                        <h3>Imarika</h3>
+                        <p>{contactInfo.address}<br />
+                            {contactInfo.city}<br />
+                            {contactInfo.country}<br />
+                            <strong>Phone:</strong> {contactInfo.phone}<br />
+                            <strong>Email:</strong> {contactInfo.email}<br />
+                        </p>
+                    </div>
 
-                        <div className="col-lg-2 col-md-6 footer-links">
-                            <h4>Useful Links</h4>
+                    {[usefulLinks, ourServices].map((links, index) => (
+                        <div key={index} className={`col-lg-${index === 0 ? '2' : '3'} col-md-6 footer-links`}>
+                            <h4>{index === 0 ? 'Useful Links' : 'Our Services'}</h4>
                             <ul>
-                                <li><i className="bx bx-chevron-right"></i> <a href="/">Home</a></li>
-                                <li><i className="bx bx-chevron-right"></i> <a href="#about">About us</a></li>
-                                <li><i className="bx bx-chevron-right"></i> <a href="#services">Services</a></li>
-                                <li><i className="bx bx-chevron-right"></i> <a href="#termsofservice">Terms of service</a></li>
-                                <li><i className="bx bx-chevron-right"></i> <a href="#privacypolicy">Privacy policy</a></li>
+                                {links.map((item, idx) => (
+                                <li key={idx}><i className="bx bx-chevron-right"></i> <a href={item.href}>{item.text}</a></li>
+                                ))}
                             </ul>
                         </div>
+                    ))}
 
-                        <div className="col-lg-3 col-md-6 footer-links">
-                            <h4>Our Services</h4>
-                            <ul>
-                                <li><i className="bx bx-chevron-right"></i> <a href="#web">Web Design</a></li>
-                                <li><i className="bx bx-chevron-right"></i> <a href="#web">Web Development</a></li>
-                                <li><i className="bx bx-chevron-right"></i> <a href="#product">Product Management</a></li>
-                                <li><i className="bx bx-chevron-right"></i> <a href="#marketing">Marketing</a></li>
-                                <li><i className="bx bx-chevron-right"></i> <a href="#graphic">Graphic Design</a></li>
-                            </ul>
-                        </div>
-
-                        <div className="col-lg-4 col-md-6 footer-newsletter">
-                            <h4>Join Our Newsletter</h4>
-                            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-                            <form action="" method="post">
-                                <input type="email" name="email" /><input type="submit" value="Subscribe" />
-                            </form>
-                        </div>
-
+                    <div className="col-lg-4 col-md-6 footer-newsletter">
+                        <h4>Join Our Newsletter</h4>
+                        <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+                        <form action="" method="post">
+                            <input type="email" name="email" /><input type="submit" value="Subscribe" />
+                        </form>
                     </div>
                 </div>
             </div>
-            
+        </div>
 
-            <div className="container d-lg-flex py-4">
-
-                <div className="me-lg-auto text-center text-lg-start">
-                    <div className="copyright">
-                        &copy; Copyright <strong><span>Imarika</span></strong>. All Rights Reserved
-                    </div>
-                    <div className="credits">
-                        Designed by <a href="jereny.com/">JKatush</a>
-                    </div>
+        <div className="container d-lg-flex py-4">
+            <div className="me-lg-auto text-center text-lg-start">
+                <div className="copyright">
+                    &copy; Copyright <strong><span>Imarika</span></strong>.
+                    All Rights Reserved
                 </div>
-                <div className="social-links text-center text-lg-right pt-3 pt-lg-0">
-                    <a href="http://twitter.com" className="twitter"><i className="bx bxl-twitter"></i></a>
-                    <a href="http://facebook.com" className="facebook"><i className="bx bxl-facebook"></i></a>
-                    <a href="http://instagram.com" className="instagram"><i className="bx bxl-instagram"></i></a>
-                    <a href="google.com" className="google-plus"><i className="bx bxl-skype"></i></a>
-                    <a href="linkedin.com" className="linkedin"><i className="bx bxl-linkedin"></i></a>
+                <div className="credits">
+                    Designed by <a href="jereny.com/">JKatush</a>
                 </div>
             </div>
-        </footer>
-        </>
-    );
-}
+            <div className="social-links text-center text-lg-right pt-3 pt-lg-0">
+                <a href="http://twitter.com" className="twitter"><i className="bx bxl-twitter"></i></a>
+                <a href="http://facebook.com" className="facebook"><i className="bx bxl-facebook"></i></a>
+                <a href="http://instagram.com" className="instagram"><i className="bx bxl-instagram"></i></a>
+                <a href="google.com" className="google-plus"><i className="bx bxl-skype"></i></a>
+                <a href="linkedin.com" className="linkedin"><i className="bx bxl-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+    </>
+  );
+};
 
 export default Footer;

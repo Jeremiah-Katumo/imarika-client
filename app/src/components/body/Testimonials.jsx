@@ -40,7 +40,7 @@ const Testimonials = () => {
                             <span key={index} className={`carousel-item swiper-slider ${index === currentIndex ? "active" : ""}`}>
                                 <div className="testimonial-item" onClick={handleNext}>
                                     <img src={testimonial.image} className="testimonial-img" alt="" />
-                                    <h3>{testimonial.name}</h3>
+                                    <h3 className='testimonial-heading'>{testimonial.name}</h3>
                                     <h4>{testimonial.position}</h4>
                                     <p>
                                         <i className="bx bxs-quote-alt-left quote-icon-left"></i>
