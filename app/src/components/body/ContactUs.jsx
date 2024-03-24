@@ -1,6 +1,35 @@
 import React from "react";
 import '../../assets/css/main.css';
 
+
+function InfoBox({ icon, title, content, delay }) {
+    return (
+        <div className="col-xl-3 col-lg-4 mt-4" data-aos="fade-up" data-aos-delay={delay}>
+            <div className="info-box">
+                <i className={icon}></i>
+                <h3>{title}</h3>
+                <p dangerouslySetInnerHTML={{ __html: content }}></p>
+            </div>
+        </div>
+    );
+}
+
+function ContactUsInfo() {
+    const infoItems = [
+        { icon: "bx bx-map", title: "Our Address", content: "A108 Adam Street, New York, NY 535022", delay: 0 },
+        { icon: "bx bx-envelope", title: "Email Us", content: "info@example.com<br/>contact@example.com", delay: 100 },
+        { icon: "bx bx-phone-call", title: "Call Us", content: "+1 5589 55488 55<br/>+1 6678 254445 41", delay: 200 }
+    ];
+
+    return (                  
+                <div className="row justify-content-center">
+                    {infoItems.map((item, index) => (
+                        <InfoBox key={index} icon={item.icon} title={item.title} content={item.content} delay={item.delay} />
+                    ))}
+                </div>
+    );
+}
+
 function ContactUs() {
 
     return (
@@ -9,35 +38,11 @@ function ContactUs() {
             <div class="container">
 
                 <div class="section-title">
-                <h2 data-aos="fade-up">Contact</h2>
-                <p data-aos="fade-up">Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                    <h2 data-aos="fade-up">Contact</h2>
+                    <p data-aos="fade-up">Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
                 </div>
 
-                <div class="row justify-content-center">
-
-                <div class="col-xl-3 col-lg-4 mt-4" data-aos="fade-up">
-                    <div class="info-box">
-                    <i class="bx bx-map"></i>
-                    <h3>Our Address</h3>
-                    <p>A108 Adam Street, New York, NY 535022</p>
-                    </div>
-                </div>
-
-                <div class="col-xl-3 col-lg-4 mt-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="info-box">
-                    <i class="bx bx-envelope"></i>
-                    <h3>Email Us</h3>
-                    <p>info@example.com<br/>contact@example.com</p>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 mt-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="info-box">
-                    <i class="bx bx-phone-call"></i>
-                    <h3>Call Us</h3>
-                    <p>+1 5589 55488 55<br/>+1 6678 254445 41</p>
-                    </div>
-                </div>
-                </div>
+                <ContactUsInfo />
 
                 <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="300">
                 <div class="col-xl-9 col-lg-12 mt-4">
