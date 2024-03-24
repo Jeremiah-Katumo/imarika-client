@@ -10,22 +10,22 @@ function Values() {
     const cardInfo = [
         {
             title: 'Our Mission',
-            text: 'Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua.',
+            text: 'Empowering our members socio-economically by providing competitive financial solutions.',
             image: ValueOne
         },
         {
-            title: 'Our Plan',
+            title: 'Core Values',
             text: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem doloremque laudantium, totam rem.',
             image: ValueTwo
         },
         {
             title: 'Our Vision',
-            text: 'Nemo enim ipsam voluptatem quia voluptas sit aut odit aut fugit, sed quia magni dolores.',
+            text: 'To be: The trusted Sacco of Choice.',
             image: ValueThree
         },
         {
-            title: 'Our Care',
-            text: 'Nostrum eum sed et autem dolorum perspiciatis. Magni porro quisquam laudantium voluptatem.',
+            title: 'Our Motto',
+            text: '"Together, we grow".',
             image: ValueFour
         }
     ];

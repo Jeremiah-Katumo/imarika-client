@@ -40,7 +40,7 @@ function WhyUs() {
                 <div className="row">
                     <div className="col-xl-4 col-lg-5" data-aos="fade-up">
                         <div className="content">
-                            <h3>Why Choose Flexor for your company website?</h3>
+                            <h3>Why Choose Imarika?</h3>
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                 Asperiores dolores sed et. Tenetur quia eos. Autem tempore quibusdam vel necessitatibus optio ad corporis.

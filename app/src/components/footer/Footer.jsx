@@ -22,11 +22,11 @@ const Footer = () => {
 
   // Our Services
   const ourServices = [
-    { text: 'Web Design', href: '#web' },
-    { text: 'Web Development', href: '#web' },
-    { text: 'Product Management', href: '#product' },
-    { text: 'Marketing', href: '#marketing' },
-    { text: 'Graphic Design', href: '#graphic' }
+    { text: 'Banking', href: '#web' },
+    { text: 'Savings', href: '#web' },
+    { text: 'Agribusiness Financing', href: '#product' },
+    { text: 'Education Financing', href: '#marketing' },
+    { text: 'E Channels', href: '#graphic' }
   ];
 
   return (
@@ -78,11 +78,10 @@ const Footer = () => {
                 </div>
             </div>
             <div className="social-links text-center text-lg-right pt-3 pt-lg-0">
-                <a href="http://twitter.com" className="twitter"><i className="bx bxl-twitter"></i></a>
-                <a href="http://facebook.com" className="facebook"><i className="bx bxl-facebook"></i></a>
-                <a href="http://instagram.com" className="instagram"><i className="bx bxl-instagram"></i></a>
-                <a href="google.com" className="google-plus"><i className="bx bxl-skype"></i></a>
-                <a href="linkedin.com" className="linkedin"><i className="bx bxl-linkedin"></i></a>
+                <a href="http://twitter.com" className="twitter"><i className="bx bi-twitter"></i></a>
+                <a href="http://facebook.com" className="facebook"><i className="bx bi-facebook"></i></a>
+                <a href="http://instagram.com" className="instagram"><i className="bx bi-instagram"></i></a>
+                <a href="linkedin.com" className="linkedin"><i className="bx bi-linkedin"></i></a>
             </div>
         </div>
     </footer>
