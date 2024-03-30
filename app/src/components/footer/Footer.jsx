@@ -81,7 +81,7 @@ const Footer = () => {
                 <a href="http://twitter.com" className="twitter"><i className="bx bi-twitter"></i></a>
                 <a href="http://facebook.com" className="facebook"><i className="bx bi-facebook"></i></a>
                 <a href="http://instagram.com" className="instagram"><i className="bx bi-instagram"></i></a>
-                <a href="linkedin.com" className="linkedin"><i className="bx bi-linkedin"></i></a>
+                <a href="http://linkedin.com" className="linkedin"><i className="bx bi-linkedin"></i></a>
             </div>
         </div>
     </footer>
