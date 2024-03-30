@@ -1,9 +1,9 @@
 import React from "react";
 import '../../assets/css/main.css';
-import ValueOne from '../../assets/img/values-1.png';
-import ValueTwo from '../../assets/img/values-2.png';
-import ValueThree from '../../assets/img/values-3.png';
-import ValueFour from '../../assets/img/values-4.png';
+import ValueOne from '../../assets/img/values/mission.png';
+import ValueTwo from '../../assets/img/values/values.png';
+import ValueThree from '../../assets/img/values/vision.png';
+import ValueFour from '../../assets/img/values/motto.png';
 
 function Values() {
     // Information for each card
