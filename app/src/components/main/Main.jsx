@@ -4,7 +4,7 @@ import Header from '../header/Header';
 import TopBar from '../body/TopBar';
 import Hero from '../header/Hero';
 import Footer from '../footer/Footer';
-import BackToTop from '../footer/BackToTop';
+import BackToTop from '../buttons/BackToTop';
 import WhyUs from '../body/WhyUs';
 import AboutUs from '../body/AboutUs';
 import Values from '../body/Values';
