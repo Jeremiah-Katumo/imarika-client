@@ -22,7 +22,7 @@ function Hero() {
             }
 
             return () => clearTimeout(timer);
-        }, 5000)
+        }, 3000)
     }, [currentState])
 
     const goToNext = () => {
