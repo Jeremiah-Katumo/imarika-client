@@ -33,17 +33,17 @@ function Hero() {
         backgroundImage: `url(${carouselImages[currentState].img})`,
         backgroundPosition: 'center',
         backgroundSize: '100%',
-        height: '800px',
-        // width: '80%'
+        height: '600px',
+        width: '100%'
     };
 
     return (
         <>
         <section id="hero" className="d-flex flex-column justify-content-center align-items-center">
             <div className="container" data-aos="fade-up">
-                <div className="position-relative h-100">
-                    <div className="slides-1 portfolio-details-slider swiper">
-                        <div className="swiper-wrapper align-items-center">
+                <div className="position-relative h-100 w-auto">
+                    <div className="slides-1 portfolio-details-slider swiper w-auto">
+                        <div className="swiper-wrapper align-items-center w-auto">
 
                             <div style={bgImageStyles}></div>
                             <div className="carousel-inner">
@@ -52,7 +52,7 @@ function Hero() {
                                         <img className="d-block w-100" onClick={() => goToNext(currentState)} src={slide.img} alt='' />
                                     
                                         <div className="text">
-                                            <h1 className={`text fade${index === 0 ? ' active' : ''}`}>{slide.caption}</h1>
+                                            <h1 onClick={() => goToNext(currentState)}>{slide.caption}</h1>
                                             <h2>{slide.text}</h2>
                                         </div>
                                     </div>
