@@ -44,6 +44,7 @@ body {
     bottom: 15px;
     z-index: 996;
     background: #ff5821;
+    /* background-color: #00308F; */
     width: 40px;
     height: 40px;
     border-radius: 4px;
@@ -52,12 +53,13 @@ body {
   
   .back-to-top i {
     font-size: 28px;
-    color: #fff;
+    color: #00308F;
     line-height: 0;
   }
   
   .back-to-top:hover {
     background: #ff774a;
+    /* background-color: #00308F; */
     color: #fff;
   }
   
@@ -143,9 +145,12 @@ body {
     line-height: 0;
     font-weight: 700;
     font-family: "Open Sans", sans-serif;
+    color: #00308F;
   }
   
-  #header .logo h1 a,
+  #header .logo h1 a {
+    color: #00308F;
+  }
   #header .logo h1 a:hover {
     color: #635551;
     text-decoration: none;
@@ -185,6 +190,7 @@ body {
   
   .navbar li {
     position: relative;
+    color: #00308F;
   }
   
   .navbar a,
@@ -195,7 +201,7 @@ body {
     padding: 10px 0 10px 30px;
     font-size: 14px;
     font-family: "Poppins", sans-serif;
-    color: #635551;
+    color: #00308F;
     white-space: nowrap;
     transition: 0.3s;
   }
@@ -649,9 +655,9 @@ body {
   /*--------------------------------------------------------------
   # About
   --------------------------------------------------------------*/
-  .about .icon-boxes h4 {
+  .about .icon-boxes h2 {
     font-size: 18px;
-    color: #7f6d68;
+    color: #00308F;
     margin-bottom: 15px;
   }
   
@@ -862,7 +868,7 @@ body {
   }
   
   .services .icon i {
-    color: #fff;
+    color: #00308F;
     font-size: 24px;
     line-height: 0;
   }
@@ -872,6 +878,10 @@ body {
     margin-bottom: 15px;
     font-size: 18px;
     text-transform: uppercase;
+  }
+
+  #services .section-title h2 {
+    color: #00308F;
   }
   
   .services .title a {
@@ -1099,6 +1109,10 @@ body {
   .portfolio .portfolio-item {
     margin-bottom: 30px;
   }
+
+  #portfolio .section-title h2 {
+    color: #00308F;
+  }
   
   .portfolio .portfolio-item .portfolio-info {
     opacity: 0;
@@ -1238,6 +1252,10 @@ body {
   /*--------------------------------------------------------------
   # Team
   --------------------------------------------------------------*/
+  #team .section-title h2 {
+    color: #00308F;
+  }
+  
   .team .member {
     margin-bottom: 20px;
     overflow: hidden;
@@ -1428,6 +1446,10 @@ body {
   /*--------------------------------------------------------------
   # F.A.Q
   --------------------------------------------------------------*/
+  #faq .section-title h2 {
+    color: #00308F;
+  }
+  
   .faq .faq-list {
     padding: 0 100px;
   }
@@ -1514,6 +1536,10 @@ body {
   /*--------------------------------------------------------------
   # Contact
   --------------------------------------------------------------*/
+  #contact .section-title h2 {
+    color: #00308F;
+  }
+
   .contact .info-box {
     color: #313030;
     box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
@@ -2206,7 +2232,7 @@ body {
   }
   
   .footer-contact h3 a:hover {
-    color: #ff5821;
+    color: #00308F;
   }
   
   #footer .footer-top .footer-links ul li {
@@ -2288,8 +2314,9 @@ body {
   #footer .social-links a {
     font-size: 18px;
     display: inline-block;
-    background: #ff5821;
-    color: #fff;
+    /* background: #ff5821; */
+    /* color: #00308F; */
+    color: #ff5821;
     line-height: 1;
     padding: 8px 0;
     margin-right: 4px;
@@ -2300,8 +2327,41 @@ body {
     transition: 0.3s;
   }
   
-  #footer .social-links a:hover {
+  /* #footer .social-links a:hover {
     background: #ff7e54;
     color: #fff;
     text-decoration: none;
+  } */
+
+  #footer .social-links a .x:hover {
+    background-color: black; /* Original Twitter blue color */
+    border-radius: 50%;
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+    display: inline-block;
   }
+
+  #footer .social-links a .fb:hover {
+    color: #3b5998;
+            border-radius: 50%;
+            width: 50px; /* Adjust size as needed */
+            height: 50px; /* Adjust size as needed */
+            display: inline-block;
+  }
+
+  #footer .social-links a .ig:hover {
+    background: linear-gradient( #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+    border-radius: 50%;
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+    display: inline-block;
+    /* transition: background-color 0.3s ease; */
+  }
+
+  #footer .social-links a .lin:hover {
+    color: #0077B5;
+    border-radius: 50%;
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+    display: inline-block;
+}

@@ -78,10 +78,10 @@ const Footer = () => {
                 </div>
             </div>
             <div className="social-links text-center text-lg-right pt-3 pt-lg-0">
-                <a href="http://twitter.com" className="twitter"><i className="bx bi-twitter"></i></a>
-                <a href="http://facebook.com" className="facebook"><i className="bx bi-facebook"></i></a>
-                <a href="http://instagram.com" className="instagram"><i className="bx bi-instagram"></i></a>
-                <a href="http://linkedin.com" className="linkedin"><i className="bx bi-linkedin"></i></a>
+                <a href="http://twitter.com" className="twitter"><i className="bx bi-twitter x"></i></a>
+                <a href="http://facebook.com" className="facebook"><i className="bx bi-facebook fb"></i></a>
+                <a href="http://instagram.com" className="instagram"><i className="bx bi-instagram ig"></i></a>
+                <a href="http://linkedin.com" className="linkedin"><i className="bx bi-linkedin lin"></i></a>
             </div>
         </div>
     </footer>
